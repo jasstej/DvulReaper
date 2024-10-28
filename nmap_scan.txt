@@ -1,0 +1,244 @@
+# Nmap 7.94SVN scan initiated Mon Oct 21 13:43:12 2024 as: nmap -sS -A -T4 -oN nmap_scan.txt example.com
+Nmap scan report for example.com (93.184.215.14)
+Host is up (0.071s latency).
+Other addresses for example.com (not scanned): 2606:2800:21f:cb07:6820:80da:af6b:8b2c
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      ECAcc (dcd/7D26)
+|_http-title: Example Domain
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html
+|     Date: Mon, 21 Oct 2024 17:44:19 GMT
+|     Server: ECAcc (dcd/7D26)
+|     Content-Length: 345
+|     Connection: close
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>404 - Not Found</title>
+|     </head>
+|     <body>
+|     <h1>404 - Not Found</h1>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: OPTIONS, GET, HEAD, POST
+|     Date: Mon, 21 Oct 2024 17:44:20 GMT
+|     Server: ECAcc (dcd/7D26)
+|     Content-Length: 0
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html
+|     Content-Length: 349
+|     Connection: close
+|     Date: Mon, 21 Oct 2024 17:44:20 GMT
+|     Server: ECLF (dcd/7D6D)
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>400 - Bad Request</title>
+|     </head>
+|     <body>
+|     <h1>400 - Bad Request</h1>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.0 501 Not Implemented
+|     Content-Type: text/html
+|     Content-Length: 357
+|     Connection: close
+|     Date: Mon, 21 Oct 2024 17:44:21 GMT
+|     Server: ECLF (dcd/7D29)
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>501 - Not Implemented</title>
+|     </head>
+|     <body>
+|     <h1>501 - Not Implemented</h1>
+|     </body>
+|_    </html>
+| http-server-header: 
+|   ECAcc (dcd/7D26)
+|   ECAcc (dcd/7D84)
+|_  ECLF (dcd/7D6D)
+443/tcp open  ssl/https ECAcc (dcd/7D26)
+|_http-title: Example Domain
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  h3
+| http-server-header: 
+|   ECAcc (dcd/7D26)
+|_  ECAcc (dcd/7D85)
+| ssl-cert: Subject: commonName=www.example.org/organizationName=Internet\xC2\xA0Corporation\xC2\xA0for\xC2\xA0Assigned\xC2\xA0Names\xC2\xA0and\xC2\xA0Numbers/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:www.example.org, DNS:example.net, DNS:example.edu, DNS:example.com, DNS:example.org, DNS:www.example.com, DNS:www.example.edu, DNS:www.example.net
+| Not valid before: 2024-01-30T00:00:00
+|_Not valid after:  2025-03-01T23:59:59
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html
+|     Date: Mon, 21 Oct 2024 17:44:31 GMT
+|     Server: ECAcc (dcd/7D85)
+|     Content-Length: 345
+|     Connection: close
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>404 - Not Found</title>
+|     </head>
+|     <body>
+|     <h1>404 - Not Found</h1>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html
+|     Date: Mon, 21 Oct 2024 17:44:27 GMT
+|     Server: ECAcc (dcd/7D26)
+|     Content-Length: 345
+|     Connection: close
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>404 - Not Found</title>
+|     </head>
+|     <body>
+|     <h1>404 - Not Found</h1>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: OPTIONS, GET, HEAD, POST
+|     Date: Mon, 21 Oct 2024 17:44:29 GMT
+|     Server: ECAcc (dcd/7D26)
+|     Content-Length: 0
+|     Connection: close
+|   tor-versions: 
+|     HTTP/1.0 501 Not Implemented
+|     Content-Type: text/html
+|     Content-Length: 357
+|     Connection: close
+|     Date: Mon, 21 Oct 2024 17:44:32 GMT
+|     Server: ECLF (dcd/7D34)
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>501 - Not Implemented</title>
+|     </head>
+|     <body>
+|     <h1>501 - Not Implemented</h1>
+|     </body>
+|_    </html>
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|   h2
+|   http/1.1
+|   http/1.0
+|   h3
+|_  h3-29
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.94SVN%I=7%D=10/21%Time=671692F3%P=x86_64-pc-linux-gnu%r(
+SF:GetRequest,1F3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20te
+SF:xt/html\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:19\x20GMT\r\nSer
+SF:ver:\x20ECAcc\x20\(dcd/7D26\)\r\nContent-Length:\x20345\r\nConnection:\
+SF:x20close\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"iso-8859-1\"\?
+SF:>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tra
+SF:nsitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.w3\.
+SF:org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xmlns=\"http://
+SF:www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\">\n\t<head>\
+SF:n\t\t<title>404\x20-\x20Not\x20Found</title>\n\t</head>\n\t<body>\n\t\t
+SF:<h1>404\x20-\x20Not\x20Found</h1>\n\t</body>\n</html>\n")%r(HTTPOptions
+SF:,99,"HTTP/1\.0\x20200\x20OK\r\nAllow:\x20OPTIONS,\x20GET,\x20HEAD,\x20P
+SF:OST\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:20\x20GMT\r\nServer:
+SF:\x20ECAcc\x20\(dcd/7D26\)\r\nContent-Length:\x200\r\nConnection:\x20clo
+SF:se\r\n\r\n")%r(RTSPRequest,1F8,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/html\r\nContent-Length:\x20349\r\nConnection:\x20c
+SF:lose\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:20\x20GMT\r\nServer
+SF::\x20ECLF\x20\(dcd/7D6D\)\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding
+SF:=\"iso-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHT
+SF:ML\x201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x
+SF:20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\
+SF:"en\">\n\t<head>\n\t\t<title>400\x20-\x20Bad\x20Request</title>\n\t</he
+SF:ad>\n\t<body>\n\t\t<h1>400\x20-\x20Bad\x20Request</h1>\n\t</body>\n</ht
+SF:ml>\n")%r(X11Probe,204,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20357\r\nConnection:\x20close
+SF:\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:21\x20GMT\r\nServer:\x2
+SF:0ECLF\x20\(dcd/7D29\)\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"i
+SF:so-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x
+SF:201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"htt
+SF:p://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xm
+SF:lns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\
+SF:">\n\t<head>\n\t\t<title>501\x20-\x20Not\x20Implemented</title>\n\t</he
+SF:ad>\n\t<body>\n\t\t<h1>501\x20-\x20Not\x20Implemented</h1>\n\t</body>\n
+SF:</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=10/21%Time=671692FA%P=x86_64-pc-linux
+SF:-gnu%r(GetRequest,1F3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type
+SF::\x20text/html\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:27\x20GMT
+SF:\r\nServer:\x20ECAcc\x20\(dcd/7D26\)\r\nContent-Length:\x20345\r\nConne
+SF:ction:\x20close\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"iso-885
+SF:9-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0
+SF:\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"http://ww
+SF:w\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xmlns=\"
+SF:http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\">\n\t
+SF:<head>\n\t\t<title>404\x20-\x20Not\x20Found</title>\n\t</head>\n\t<body
+SF:>\n\t\t<h1>404\x20-\x20Not\x20Found</h1>\n\t</body>\n</html>\n")%r(HTTP
+SF:Options,99,"HTTP/1\.0\x20200\x20OK\r\nAllow:\x20OPTIONS,\x20GET,\x20HEA
+SF:D,\x20POST\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:29\x20GMT\r\n
+SF:Server:\x20ECAcc\x20\(dcd/7D26\)\r\nContent-Length:\x200\r\nConnection:
+SF:\x20close\r\n\r\n")%r(FourOhFourRequest,1F3,"HTTP/1\.0\x20404\x20Not\x2
+SF:0Found\r\nContent-Type:\x20text/html\r\nDate:\x20Mon,\x2021\x20Oct\x202
+SF:024\x2017:44:31\x20GMT\r\nServer:\x20ECAcc\x20\(dcd/7D85\)\r\nContent-L
+SF:ength:\x20345\r\nConnection:\x20close\r\n\r\n<\?xml\x20version=\"1\.0\"
+SF:\x20encoding=\"iso-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C
+SF://DTD\x20XHTML\x201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd
+SF:\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en
+SF:\"\x20lang=\"en\">\n\t<head>\n\t\t<title>404\x20-\x20Not\x20Found</titl
+SF:e>\n\t</head>\n\t<body>\n\t\t<h1>404\x20-\x20Not\x20Found</h1>\n\t</bod
+SF:y>\n</html>\n")%r(tor-versions,204,"HTTP/1\.0\x20501\x20Not\x20Implemen
+SF:ted\r\nContent-Type:\x20text/html\r\nContent-Length:\x20357\r\nConnecti
+SF:on:\x20close\r\nDate:\x20Mon,\x2021\x20Oct\x202024\x2017:44:32\x20GMT\r
+SF:\nServer:\x20ECLF\x20\(dcd/7D34\)\r\n\r\n<\?xml\x20version=\"1\.0\"\x20
+SF:encoding=\"iso-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DT
+SF:D\x20XHTML\x201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\
+SF:n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x
+SF:20lang=\"en\">\n\t<head>\n\t\t<title>501\x20-\x20Not\x20Implemented</ti
+SF:tle>\n\t</head>\n\t<body>\n\t\t<h1>501\x20-\x20Not\x20Implemented</h1>\
+SF:n\t</body>\n</html>\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose
+Running: Actiontec embedded, Linux 2.4.X
+OS CPE: cpe:/h:actiontec:mi424wr-gen3i cpe:/o:linux:linux_kernel cpe:/o:linux:linux_kernel:2.4.37
+OS details: Actiontec MI424WR-GEN3I WAP, DD-WRT v24-sp2 (Linux 2.4.37)
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.14 ms 192.168.187.2 (192.168.187.2)
+2   0.20 ms 93.184.215.14
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 21 13:45:47 2024 -- 1 IP address (1 host up) scanned in 155.25 seconds

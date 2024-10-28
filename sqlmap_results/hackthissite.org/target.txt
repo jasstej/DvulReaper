@@ -1,0 +1,1 @@
+http://hackthissite.org (GET)  # /usr/bin/sqlmap -u hackthissite.org --batch --output-dir=./sqlmap_results
